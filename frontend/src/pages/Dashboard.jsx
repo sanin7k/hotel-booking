@@ -12,7 +12,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await api.get("/user/profile");
+        const response = await api.get("/auth/profile");
         setUser(response.data);
       } catch (error) {
         console.error("Token expired or invalid", error);
