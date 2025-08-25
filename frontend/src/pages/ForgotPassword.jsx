@@ -10,7 +10,7 @@ export default function ForgotPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await api.post("/forgot-password", { email });
+      const response = await api.post("/auth/forgot-password", { email });
       setMessage(response.data.message);
       setTimeout(() => {
         navigate("/")
