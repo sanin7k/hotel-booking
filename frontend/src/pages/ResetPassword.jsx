@@ -14,7 +14,7 @@ export default function ResetPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post("/reset-password", {
+      const res = await api.post("/auth/reset-password", {
         token,
         new_password: newPassword,
         confirm_password: confirmPassword,
